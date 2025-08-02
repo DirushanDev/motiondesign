@@ -1,5 +1,5 @@
 <!-- Desktop Container -->
-<div class="hidden md:flex   px-4 py-4 items-center md:justify-between xl:justify-around bg-black text-white md:w-full">
+<div class="hidden md:flex px-4 py-4 items-center md:justify-between xl:justify-around bg-black text-white w-full">
     <!-- Logo -->
     <div class="flex">
         <img src="{{ asset('assets/29ee0e713073bdbe99ec96bfce0b39361bf5f300.gif') }}" alt="Logo" class="h-8 w-auto">
@@ -24,16 +24,17 @@
 
 <!-- Mobile Container -->
 <div class="md:hidden bg-black text-white px-4 py-4 relative">
+    <!-- Hidden Checkbox Toggle -->
+    <input type="checkbox" id="menu-toggle" class="hidden peer" />
 
-    <!-- Logo & Hamburger -->
+    <!-- Top Bar: Logo + Hamburger -->
     <div class="flex justify-between items-center">
         <!-- Logo -->
         <div>
             <img src="{{ asset('assets/29ee0e713073bdbe99ec96bfce0b39361bf5f300.gif') }}" alt="Logo" class="h-8 w-auto">
         </div>
 
-        <!-- Hamburger Toggle -->
-        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+        <!-- Hamburger Button -->
         <label for="menu-toggle" class="cursor-pointer z-50">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -42,8 +43,8 @@
         </label>
     </div>
 
-    <!-- Mobile Menu -->
-    <div class="peer-checked:block hidden mt-4 space-y-4">
+    <!-- Toggleable Mobile Menu -->
+    <div class="hidden peer-checked:block mt-4 space-y-4">
         <a href="#" class="block hover:text-gray-300">About</a>
         <a href="#" class="block font-semibold text-white">Service</a>
         <a href="#" class="block hover:text-gray-300">Case Study</a>
